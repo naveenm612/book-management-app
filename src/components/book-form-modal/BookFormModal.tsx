@@ -27,7 +27,7 @@ const BookFormModal: React.FC<BookFormModalProps> = ({
 const [titleError, setTitleError] = useState("");
   const [authorError, setAuthorError] = useState("");
   const [yearError, setYearError] = useState("");
-  
+
   useEffect(() => {
     if (mode === "edit" && bookData) {
       setForm(bookData);
@@ -101,6 +101,7 @@ const [titleError, setTitleError] = useState("");
             <option>Science Fiction</option>
             <option>Romance</option>
             <option>History</option>
+            <option>Fantasy</option>
             <option>Self-Help</option>
             <option>Travel</option>
           </select>
