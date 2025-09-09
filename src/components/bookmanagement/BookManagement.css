@@ -1,0 +1,260 @@
+.book-container {
+  padding: 2rem;
+}
+@media (max-width: 768px) {
+.book-container {
+  padding: 2rem;
+  margin-top: 65px;
+}
+}
+/* Header titles */
+.book-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+.book-subtitle {
+  color: #6b7280;
+  margin-bottom: 1.5rem;
+}
+
+/* Filters + Toggle */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.book-select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle button {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.view-toggle button.active {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Table */
+.book-table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.book-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.book-table th,
+.book-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.book-table th {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.book-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.pagination button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: #f3f4f6;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Grid View */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.book-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.card-actions1 {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+/* Badges */
+.genre-badge {
+  background: #f3f4f6;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+.status-available {
+  background: #dcfce7;
+  color: #16a34a;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+.status-issued {
+  background: #fef3c7;
+  color: #ca8a04;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+/* Action Buttons */
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background 0.2s ease-in-out;
+}
+
+.action-edit {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.action-edit:hover {
+  background: #bfdbfe;
+}
+
+.action-delete {
+  margin-left: 10px;
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.action-delete:hover {
+  background: #fecaca;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .book-table th,
+  .book-table td {
+    padding: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .filters {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .view-toggle {
+    align-self: flex-start;
+  }
+
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .book-table {
+    font-size: 0.75rem;
+  }
+
+  .card-header h3 {
+    font-size: 1rem;
+  }
+
+  .action-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .pagination span {
+    font-size: 0.8rem;
+  }
+}

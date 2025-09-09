@@ -1,0 +1,103 @@
+.header {
+  position: fixed;          /* stays fixed at top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;            /* ensures it stays above other elements */
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  color: white;
+  padding: 12px 20px;
+  flex-wrap: wrap;          /* allows wrapping on smaller screens */
+  gap: 10px;
+}
+
+/* Add padding to body so content doesn’t hide under header */
+body {
+  padding-top: 64px; /* adjust height based on header’s height */
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Search container */
+.search-container {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+}
+
+.search-container input {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 100%;
+  max-width: 220px;
+}
+
+/* Add book button */
+.add-book-btn {
+  background: #2563eb;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+  flex-shrink: 0;
+}
+
+.add-book-btn:hover {
+  background: #1d4ed8;
+}
+
+/* --- Responsive Breakpoints --- */
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+
+  .logo {
+    margin-bottom: 8px;
+  }
+
+  .search-container {
+    width: 100%;
+    margin: 8px 0;
+  }
+
+  .search-container input {
+    max-width: 100%;
+  }
+
+  .add-book-btn {
+    width: 100%;
+  }
+}
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+
+  .search-container input {
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .add-book-btn {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

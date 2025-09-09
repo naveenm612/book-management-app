@@ -1,0 +1,43 @@
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 60;
+}
+
+.confirm-box {
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  width: 320px;
+  text-align: center;
+}
+
+.confirm-box p {
+  margin-bottom: 14px;
+  font-size: 15px;
+}
+
+.confirm-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-actions button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.danger-btn {
+  background: #dc2626;
+  color: white;
+}
+
+.danger-btn:hover {
+  background: #b91c1c;
+}
