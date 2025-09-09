@@ -197,7 +197,17 @@ const BookManagement: React.FC = () => {
                       <td>{book.author}</td>
                       <td>{book.genre}</td>
                       <td>{book.year}</td>
-                      <td>{book.status}</td>
+                       <td>
+                       <span
+                      className={
+                        book.status === "Available"
+                          ? "status-available"
+                          : "status-issued"
+                      }
+                    >
+                      {book.status}
+                    </span>
+                    </td> 
                       <td>
                         <div className="card-actions1">
                           <Tooltip title="Edit" placement="top-end">
