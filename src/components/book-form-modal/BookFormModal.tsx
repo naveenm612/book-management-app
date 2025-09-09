@@ -27,7 +27,7 @@ const BookFormModal: React.FC<BookFormModalProps> = ({
 const [titleError, setTitleError] = useState("");
   const [authorError, setAuthorError] = useState("");
   const [yearError, setYearError] = useState("");
-  const [isbnError, setIsbnError] = useState("");
+  
   useEffect(() => {
     if (mode === "edit" && bookData) {
       setForm(bookData);
@@ -41,7 +41,6 @@ const [titleError, setTitleError] = useState("");
     if (name === "title") setTitleError("");
     if (name === "author") setAuthorError("");
     if (name === "year") setYearError("");
-    if (name === "isbn") setIsbnError("");
   };
 
    const validateForm = () => {
@@ -60,12 +59,6 @@ const [titleError, setTitleError] = useState("");
       setYearError("Enter a valid year.");
       isValid = false;
     }
-
-    if (!form.isbn.trim()) {
-      setIsbnError("ISBN field is required.");
-      isValid = false;
-    }
-
     return isValid;
   };
 
