@@ -6,6 +6,7 @@ import ConfirmDialog from "../confrim-dialog/ConfirmDialog";
 import Toast from "../toast/Toast";
 import Tooltip from "@mui/material/Tooltip";
 import "./BookManagement.css";
+import Footer from "../footer/Footer";
 
 interface Book {
   id: number;
@@ -322,6 +323,7 @@ const BookManagement: React.FC = () => {
       )}
 
       {toast && <Toast message={toast} onClose={() => setToast("")} />}
+        <Footer />
     </>
   );
 };
